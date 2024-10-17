@@ -17,7 +17,7 @@ for (let i = 1; i <= 10; i++) {
             mail.push(mails)
             
             listEl.insertAdjacentHTML("beforeend",`
-                <li class="mail">${mail}</li>
+                <li class="mail">${mails}</li>
                 
                 
                 `)
