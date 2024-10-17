@@ -18,6 +18,12 @@ console.log(listEL);
             
                 const mail = mails
 
+                console.log(mail);
+                listEL.innerHTML = `
+
+                    <li class="mail">${mail}</li>
+                    `
+
 
             }
 
@@ -27,9 +33,3 @@ console.log(listEL);
         })
 
 
-
-        console.log(mail);
-                listEL.innerHTML = `
-
-                    <li class="mail">${mail}</li>
-                    `
