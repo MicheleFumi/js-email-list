@@ -7,14 +7,14 @@ Inserire un bottone che al click fetchi altre 10 mail (sostituendo le altre)
 const listEL = document.querySelector(".mail_list")
 console.log(listEL);
 
-
+for (let i = 1; i <= 10; i++) {
     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then(response => {
-
             const mails = response.data.response
             console.log(mails);
+            
            
-            for (let i = 0; i <= 10; i++) {
+           
             
                 const mail = mails
 
@@ -22,10 +22,11 @@ console.log(listEL);
                 listEL.innerHTML = `
 
                     <li class="mail">${mail}</li>
+                    
                     `
 
 
-            }
+            
 
         })
         .catch(error => {
@@ -33,3 +34,4 @@ console.log(listEL);
         })
 
 
+    }
