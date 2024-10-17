@@ -4,29 +4,29 @@ Abbellire con CSS o Bootstrap
 Inserire un bottone che al click fetchi altre 10 mail (sostituendo le altre)
  */
 
-const listEL = document.querySelector(".mail_list")
-console.log(listEL);
+const listEl = document.querySelector(".mail_list")
+console.log(listEl);
+
+let mail = []
 
 for (let i = 1; i <= 10; i++) {
     axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then(response => {
             const mails = response.data.response
             console.log(mails);
+            mail.push(mails)
             
-           
-           
+            listEl.insertAdjacentHTML("beforeend",`
+                <li class="mail">${mail}</li>
+                
+                
+                `)
+                
+             
             
-                const mail = mails
-
-                console.log(mail);
-                listEL.innerHTML = `
-
-                    <li class="mail">${mail}</li>
-                    
-                    `
 
 
-            
+
 
         })
         .catch(error => {
@@ -34,4 +34,6 @@ for (let i = 1; i <= 10; i++) {
         })
 
 
-    }
+}
+
+
