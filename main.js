@@ -8,34 +8,28 @@ const listEL = document.querySelector(".mail_list")
 console.log(listEL);
 
 
-axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-.then(response => {
-    
-    const mails = response.data.response
-    console.log(mails);
-    for (let i = 0;i < 10; i++) {
-        const mail = mails;
-       console.log(mail);
-       
-    }
+    axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then(response => {
 
-    listEL.innerHTML = `
-
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    <li class="mail">${mail}</li>
-    `
+            const mails = response.data.response
+            console.log(mails);
+           
+            for (let i = 0; i <= 10; i++) {
+            
 
 
 
-})
-.catch(error => {
-    console.error(error); 
-})
+            }
+
+        })
+        .catch(error => {
+            console.error(error);
+        })
+
+
+
+        console.log(mail);
+                listEL.innerHTML = `
+
+                    <li class="mail">${mail}</li>
+                    `
